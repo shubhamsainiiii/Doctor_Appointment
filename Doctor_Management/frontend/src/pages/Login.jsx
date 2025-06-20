@@ -10,7 +10,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:7000/user/login', form)
+            const response = await axios.post('http://localhost:7000/user/login', form)
             localStorage.setItem('token', response.data.token)
             alert("login successfully");
             setFrom({ email: "", password: "" });
@@ -20,8 +20,8 @@ const Login = () => {
         }
     }
     return (
-        <div className="min-h-screen bg-gray-400 flex items-center justify-center p-4 font-primary">
-            <div className="bg-gray-200 p-8 rounded-xl shadow-md w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center p-4 font-primary">
+            <div className="bg-gray-200 p-8 rounded-xl shadow-sm shadow-gray-900 w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">Log In</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
@@ -51,7 +51,7 @@ const Login = () => {
                         </button>
                     </div>
                 </form>
-                <p className="text-center mt-4 text-sm font-medium text-gray-600">Create a new Account <Link to='/signup' className='text-blue-800 hover:underline'>Sign Up</Link> </p>
+                <p className="text-center mt-4 text-sm font-medium text-gray-600">Create a new Account <Link to='/' className='text-blue-800 hover:underline'>Sign Up</Link> </p>
                 <div className='flex mt-10 justify-between text-gray-600 font-medium'>
                     <Link to='/forget' className=''>Forget Password</Link>
                     <Link to='/reset' className=''>Reset Password</Link>
@@ -62,5 +62,6 @@ const Login = () => {
 };
 
 export default Login;
+
 
 

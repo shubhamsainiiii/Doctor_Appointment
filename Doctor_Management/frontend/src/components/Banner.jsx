@@ -14,7 +14,7 @@ const Banner = () => {
                     <p className='mt-3 sm:mt-4'>With 100+ Trusted Doctors</p>
                 </div>
                 <button
-                    onClick={() => { navigate('/login'); scrollTo(0, 0) }}
+                    onClick={() => { navigate('/signup'); scrollTo(0, 0) }}
                     className='bg-white text-xs sm:text-sm md:text-base text-gray-600 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full mt-5 sm:mt-6 hover:scale-105 transition-all duration-400 font-semibold cursor-pointer'
                 >
                     Create account

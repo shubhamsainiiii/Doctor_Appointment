@@ -20,8 +20,8 @@ const Reset = () => {
         }
     }
     return (
-        <div className="min-h-screen bg-gray-400 flex items-center justify-center p-4 font-primary">
-            <div className="bg-gray-200 p-8 rounded-xl shadow-md w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center p-4 font-primary">
+            <div className="bg-gray-200 p-8 rounded-xl shadow-sm shadow-gray-900 w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">Reset Password</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input

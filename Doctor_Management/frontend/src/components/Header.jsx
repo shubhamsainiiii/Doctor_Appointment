@@ -26,7 +26,7 @@ const Header = () => {
                         href="#speciality"
                     >
                         Book appointment
-                        <FiArrowRight className='size-4'/>
+                        <FiArrowRight className='size-4' />
                     </a>
                 </div>
 
